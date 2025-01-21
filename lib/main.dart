@@ -105,6 +105,7 @@ class _PasswordPageState extends State<PasswordPage> {
             TextField(
               key: const Key('password_text_field'),
               controller: _passwordController,
+              autofocus: true,
               obscureText: true,
               decoration: const InputDecoration(
                 labelText: 'Password',
