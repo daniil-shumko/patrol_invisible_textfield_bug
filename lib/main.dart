@@ -46,6 +46,7 @@ class _UsernamePageState extends State<UsernamePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              key: const Key('username_text_field'),
               controller: _usernameController,
               decoration: const InputDecoration(
                 labelText: 'Username',
@@ -54,6 +55,7 @@ class _UsernamePageState extends State<UsernamePage> {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
+              key: const Key('username_next_button'),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -101,6 +103,7 @@ class _PasswordPageState extends State<PasswordPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              key: const Key('password_text_field'),
               controller: _passwordController,
               obscureText: true,
               decoration: const InputDecoration(
@@ -110,6 +113,7 @@ class _PasswordPageState extends State<PasswordPage> {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
+              key: const Key('password_next_button'),
               onPressed: () {
                 if (_passwordController.text.isNotEmpty) {
                   Navigator.pushReplacement(
@@ -143,6 +147,7 @@ class WelcomePage extends StatelessWidget {
       body: Center(
         child: Text(
           username,
+          key: const Key('welcome_text'),
           style: Theme.of(context).textTheme.headlineLarge,
         ),
       ),
